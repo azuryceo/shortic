@@ -3,9 +3,11 @@ const app = express()
 const mongoose = require('mongoose')
 // import the model here
 const ShortURL = require('./models/url')
+require('dotenv').config()
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', async (req, res) => {
 	const allData = await ShortURL.find()
@@ -46,7 +48,7 @@ app.get('/:shortid', async (req, res) => {
 })
 
 // Setup your mongodb connection here
-mongoose.connect(process.env.MONGO, {
+mongoose.connect(process.env.MONGODB, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 })

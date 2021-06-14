@@ -2,484 +2,36 @@
 <html>
 	<head prefix="og: http://ogp.me/ns#">
 		<meta charset="UTF-8">
-		<title>Azury - Shortener</title>
-		<meta content="Azury - Shortener" property="og:title">
+		<title>Shorty</title>
+		<meta content="Shorty" property="og:title">
 		<meta content="IE=edge" http-equiv="X-UA-Compatible">
 		<meta content="object" property="og:type">
-		<meta content="Azury" property="og:site_name">
-		<meta content="That's how u create community." property="og:description">
-		<meta content="https://cdn.discordapp.com/attachments/788045891860299796/788049665803157504/icon.png" property="og:image">
+		<meta content="Shorty" property="og:site_name">
+		<meta content="Shortener that satisfies all your needs." property="og:description">
+		<meta content="@azurystudios" property="og:author">
+		<meta content="https://cdn.discordapp.com/attachments/794910747221950505/794923997787717672/brand.svg" property="og:image">
 		<meta content="64" property="og:image:width">
 		<meta content="64" property="og:image:height">
 		<meta content="https://azury.gg" property="og:url">
 		<meta content="summary" property="twitter:card">
-		<meta content="Azury" property="twitter:title">
-		<meta content="That's how u create community." property="twitter:description">
-		<meta content="https://cdn.discordapp.com/attachments/788045891860299796/788049665803157504/icon.png" property="twitter:image">
+		<meta content="Shorty" property="twitter:title">
+		<meta content="Shortener that satisfies all your needs." property="twitter:description">
+		<meta content="https://cdn.discordapp.com/attachments/794910747221950505/794923997787717672/brand.svg" property="twitter:image">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-		<link rel="icon" href="https://cdn.discordapp.com/attachments/788045891860299796/788049665803157504/icon.png">
-		<link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/788045891860299796/788049665803157504/icon.png">
-		<link rel="stylesheet" href="https://cdn.discordapp.com/attachments/788045993635217420/788151553763835924/master.css">
+		<link rel="icon" href="https://cdn.discordapp.com/attachments/794910747221950505/794923997787717672/brand.svg">
+		<link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/794910747221950505/794923997787717672/brand.svg">
+		<link rel="stylesheet" href="assets/2b21780eb09d.css">
 
-		<noscript>Something went wrong. Try enabling JavaScript in your browser!</noscript>
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-0EJMC19QGF"></script>
+		<noscript>Shorty needs JavaScript to work correctly.</noscript>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-86H782WT4S"></script>
 		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
 
-		  gtag('config', 'G-0EJMC19QGF');
+		  gtag('config', 'G-86H782WT4S');
 		</script>
-
-		<style media="screen">
-		/******************** Import ********************/
-
-		@import url('https://pro.fontawesome.com/releases/v5.15.1/css/all.css');
-		@import url('https://cdn.jsdelivr.net/npm/disfont@latest/master.css');
-		@import url('https://cdn.jsdelivr.net/npm/tippy.js@6.2.6/animations/shift-toward-extreme.min.css');
-
-		/******************** Basic ********************/
-
-		body, html {
-		  height: 100%;
-		  width: 100%;
-		  margin: 0;
-		  padding: 20px 0;
-		  text-align: center;
-		  text-rendering: optimizeLegibility;
-		  font-size: 100%;
-		  user-select: none;
-		  scroll-behavior: smooth;
-		  background: var(--background-primary);
-		}
-
-		* {
-		  outline: 0;
-		  border: none;
-		  font-family: var(--font);
-		  margin: 0;
-		  padding: 0;
-		  -webkit-tap-highlight-color: transparent;
-		  -webkit-font-smoothing: antialiased;
-		  text-decoration: none;
-		  list-style: none;
-		}
-
-		a, button {
-		  transition: .3s;
-		}
-
-		a:hover, button:hover {
-		  cursor: pointer;
-		}
-
-		svg {
-		  display: block;
-		  max-width: 100%;
-		}
-
-		b, strong {
-		  font-weight: 600;
-		}
-
-		/******************** Theme ********************/
-
-		:root {
-		  --font: 'Whitney', sans-serif;
-
-		  --white: #FFFFFF;
-		  --blurple: #7289DA;
-		  --blurple-secondary: #8EA0E1;
-		  --blurple-tertiary: #4F5F98;
-
-		  --header: #FFFFFF;
-		  --text: #DCDDDE;
-		  --text-dark: #B9BBBE;
-		  --text-darker: #72767D;
-		  --text-darkest: #4F5660;
-		  --text-link: #0067E0;
-
-		  --background-primary: #36393F;
-		  --background-secondary: #2F3136;
-		  --background-secondary-alt: #292B2F;
-		  --background-tertiary: #202225;
-		  --background-tertiary-alt: #18191C;
-
-		  --interactive-bg-hover: #34373C;
-		  --interactive-bg-active: #393C43;
-
-		  --green: #43B581;
-		  --orange: #FAA61A;
-		  --red: #F04747;
-
-		  --shadow-bottom: rgba(0, 0, 0, 0.16) 0px 4px 4px;
-		}
-
-		/******************** Tooltip ********************/
-
-		.tippy-box[data-theme~=darken] {
-		  background: rgb(0, 0, 0);
-		  color: #B9BBBE;
-		  font-size: 16px;
-		  font-weight: 500;
-		  padding: 3px;
-		  border-radius: 5px;
-		  text-align: left;
-		  z-index: 99;
-		}
-
-		.tippy-box[data-theme~=darken]>.tippy-arrow {
-		  width: 10px;
-		  height: 10px;
-		}
-
-		.tippy-box[data-theme~=darken][data-placement^=top]>.tippy-arrow:before {
-		  border-width: 7px 7px 0;
-		  border-top-color: rgb(0, 0, 0);
-		}
-
-		.tippy-box[data-theme~=darken][data-placement^=bottom]>.tippy-arrow:before {
-		  border-width: 0 7px 7px;
-		  border-bottom-color: rgb(0, 0, 0);
-		}
-
-		.tippy-box[data-theme~=darken][data-placement^=left]>.tippy-arrow:before {
-		  border-width: 7px 0 7px 7px;
-		  border-left-color: rgb(0, 0, 0);
-		}
-
-		.tippy-box[data-theme~=darken][data-placement^=right]>.tippy-arrow:before {
-		  border-width: 7px 7px 7px 0;
-		  border-right-color: rgb(0, 0, 0);
-		}
-
-		.tippy-box[data-theme~=darken]>.tippy-backdrop {
-		  background: rgb(0, 0, 0);
-		}
-
-		.tippy-box[data-theme~=darken]>.tippy-svg-arrow {
-		  fill: rgb(0, 0, 0);
-		}
-
-		/******************** Loader ********************/
-
-		.loader-oa2dik {
-		  display: flex;
-		  align-items: center;
-		  justify-content: center;
-		  position: fixed;
-		  z-index: 99;
-		  bottom: 0;
-		  left: 0;
-		  height: 100%;
-		  width: 100%;
-		  background: var(--background-tertiary);
-		}
-
-		.spinner-tf89tw {
-		  margin: 100px auto;
-		  width: 40px;
-		  height: 40px;
-		  position: relative;
-		}
-
-		.cube-hwwb77, .cube-2usk81 {
-		  background: var(--blurple);
-		  width: 15px;
-		  height: 15px;
-		  position: absolute;
-		  top: 0;
-		  left: 0;
-		  -webkit-animation: animation-m5j383 1.8s infinite ease-in-out;
-		  animation: animation-m5j383 1.8s infinite ease-in-out;
-		}
-
-		.cube-2usk81 {
-		  -webkit-animation-delay: -0.9s;
-		  animation-delay: -0.9s;
-		}
-
-		@-webkit-keyframes animation-m5j383 {
-		  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
-		  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
-		  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
-		  100% { -webkit-transform: rotate(-360deg) }
-		}
-
-		@keyframes animation-m5j383 {
-		  25% {
-		    transform: translateX(42px) rotate(-90deg) scale(0.5);
-		    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
-		  } 50% {
-		    transform: translateX(42px) translateY(42px) rotate(-179deg);
-		    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
-		  } 50.1% {
-		    transform: translateX(42px) translateY(42px) rotate(-180deg);
-		    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
-		  } 75% {
-		    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-		    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
-		  } 100% {
-		    transform: rotate(-360deg);
-		    -webkit-transform: rotate(-360deg);
-		  }
-		}
-
-		/******************** App ********************/
-
-		.app-7hx5g9 {
-		  display: none;
-		}
-
-		::-webkit-scrollbar {
-		  height: 16px;
-		  width: 16px;
-		}
-
-		::-webkit-scrollbar-corner {
-		  background-color: transparent;
-		}
-
-		::-webkit-scrollbar-thumb {
-		  background-color: rgb(32, 34, 37);
-		  border: 4px solid transparent;
-		  border-radius: 8px;
-		  min-height: 40px;
-		  background-clip: padding-box;
-		}
-
-		::-webkit-scrollbar-track {
-		  background-color: rgb(46, 51, 56);
-		  border: 4px solid transparent;
-		  border-radius: 8px;
-		  margin-bottom: 8px;
-		  background-clip: padding-box;
-		}
-
-		/******************** Form ********************/
-
-		.section-fhsah1 {
-		  display: flex;
-		  align-items: center;
-		  justify-content: top;
-		  flex-direction: column;
-		}
-
-		.section-fhsah1 img {
-		  width: 256px;
-		  margin: 60px 0 60px 0;
-		  pointer-events: none;
-		}
-
-		.section-fhsah1 h1 {
-		  font-size: 32px;
-		  font-weight: 500;
-		  color: var(--header);
-		  margin-bottom: 30px;
-		}
-
-		.form-wjfurz {
-		  width: auto;
-		  text-align: left;
-		}
-
-		.form-wjfurz .label-fx6oxx {
-		  font-size: 16px;
-		  font-weight: 500;
-		  color: var(--header);
-		  text-align: left;
-		}
-
-		.row-86bszd {
-		  display: flex;
-		  align-items: center;
-		  justify-content: left;
-		}
-
-		.form-wjfurz input[type=url] {
-		  font-size: 16px;
-		  background: var(--background-secondary-alt);
-		  border: solid 2px var(--background-secondary-alt);
-		  padding: 9px;
-		  border-radius: 3px;
-		  width: 300px;
-		  font-weight: 500;
-		  margin: 5px 10px 0 0;
-		  color: var(--text);
-		}
-
-		.form-wjfurz input[type=url]:focus {
-		  border: solid 2px var(--blurple);
-		}
-
-		.form-wjfurz .btn-24wvst {
-		  background: var(--blurple);
-		  border-color: var(--blurple);
-		  color: var(--white);
-		  min-width: 60px;
-		  font-size: 16px;
-		  font-weight: 500;
-		  border-radius: 3px;
-		  transition: .3s;
-		  padding: 10px 14px;
-		  box-shadow: var(--shadow-bottom);
-		}
-
-		.form-wjfurz .btn-24wvst:hover {
-		  background: var(--blurple-secondary);
-		}
-
-		.form-wjfurz .btn-24wvst:active {
-		  background: var(--blurple-tertiary);
-		}
-
-		/******************** Table ********************/
-
-		.section-w1dct6 {
-		  margin-top: 100px;
-		  display: flex;
-		  align-items: center;
-		  justify-content: top;
-		  flex-direction: column;
-		}
-
-		.table-tjx6kc {
-		  border: none;
-		  text-align: left;
-		  min-width: 600px;
-		  max-width: 1000px;
-		  box-shadow: var(--shadow-bottom);
-		  margin-bottom: 20px;
-		}
-
-		.table-tjx6kc thead {
-		  background: #202225;
-		  border: none;
-		  border-bottom: solid 1px #040405;
-		}
-
-		.table-tjx6kc thead th:nth-child(1) {
-		  border-top-left-radius: 3px;
-		}
-
-		.table-tjx6kc thead th:nth-child(3) {
-		  border-top-right-radius: 3px;
-		}
-
-		.table-tjx6kc thead th {
-		  padding: 8px;
-		  font-size: 12px;
-		  line-height: 15px;
-		  color: var(--text);
-		  font-weight: 500;
-		  text-transform: uppercase;
-		}
-
-		.table-tjx6kc tbody tr td {
-		  margin: 0;
-		  border: none;
-		}
-
-		.table-tjx6kc tbody tr {
-		  background: #18191C;
-		  width: 150px;
-		  border: none;
-		}
-
-		.table-tjx6kc tbody tr:nth-child(even) {
-		  background: #121315;
-		}
-
-		.table-tjx6kc tbody tr td {
-		  font-size: 16px;
-		  font-weight: 500;
-		  color: var(--text);
-		  padding: 8px;
-		}
-
-		.table-tjx6kc tbody tr:nth-last-child(1) td:nth-child(1) {
-		  border-bottom-left-radius: 3px;
-		}
-
-		.table-tjx6kc tbody tr:nth-last-child(1) td:nth-child(3) {
-		  border-bottom-right-radius: 3px;
-		}
-
-		.table-tjx6kc tbody tr td a {
-		  font-size: 16px;
-		  font-weight: 500;
-		  color: var(--blurple);
-		}
-
-		.table-tjx6kc tbody tr td a:hover {
-		  text-decoration: underline;
-		  color: var(--blurple-secondary);
-		}
-
-		.row-pgapvi {
-		  display: flex;
-		  align-items: center;
-		  justify-content: left;
-		}
-
-		.row-pgapvi i {
-		  font-size: 20px;
-		  margin: 0 5px;
-		}
-
-		.row-pgapvi .fa-copy, .fa-angle-right {
-		  color: var(--text-dark);
-		  transition: .3s;
-		}
-
-		.row-pgapvi .fa-copy:hover, .fa-angle-right:hover {
-		  color: var(--text);
-		  transition: .3s;
-			cursor: pointer;
-		}
-
-		.row-pgapvi .fa-copy:active, .fa-angle-right:active {
-		  color: var(--blurple);
-			cursor: pointer;
-		}
-
-		.announcement-oflwkt {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-      position: absolute;
-      left: calc(50% - 300px);
-      top: 20px;
-			width: 600px;
-			background: rgba(114,137,218,.2);
-			border: solid 2px var(--blurple);
-      border-radius: 5px;
-			padding: 15px;
-		}
-
-		.announcement-oflwkt p {
-			font-size: 16px;
-			font-weight: 500;
-			color: var(--blurple);
-		}
-
-		.version-euwwan {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-			position: absolute;
-			bottom: 10px;
-      width: 100%;
-      height: auto;
-		}
-
-    .version-euwwan p {
-      font-size: 16px;
-			font-weight: 500;
-			color: var(--text-darker);
-    }
-		</style>
   </head>
 
   <body oncontextmenu="return false;">
@@ -492,11 +44,12 @@
 
     <main class="app-7hx5g9">
 			<div class="announcement-oflwkt">
-				<p>v0.2 out now! We have added new smart features.</p>
+				<p>January 2, 2020: We will transfer the service to a other domain on January 31, 2021.</p>
 			</div>
+
 			<section class="section-fhsah1">
-				<img src="https://cdn.discordapp.com/attachments/788045891860299796/788049642532503573/wumpus.png" alt="error">
-				<h1>Shortener</h1>
+				<img src="https://cdn.discordapp.com/attachments/794910747221950505/794923997787717672/brand.svg" alt="error">
+				<h1>Shorty</h1>
 				<form class="form-wjfurz" action="/short" method="POST">
 					<label class="label-fx6oxx" for="fullUrl">YOUR URL</label>
 					<div class="row-86bszd">
@@ -528,7 +81,7 @@
 							<td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
 							<td><a class="link-sp0l5y" onclick="copy('https://azury.cc/<%= shortUrl.short %>')"><%= shortUrl.short %></a></td>
 							<td><%= shortUrl.clicks %></td>
-							<td class="row-pgapvi"><i class="fas fa-copy" onclick="copy('https://azury.cc/<%= shortUrl.short %>')"></i><i class="fal fa-angle-right" onclick="window.location.href='https://azury.cc/<%= shortUrl.short %>'"></i></td>
+							<td class="row-pgapvi"><i class="fas fa-copy" onclick="copy('https://azury.cc/<%= shortUrl.short %>')"></i><i class="fas fa-share" onclick="window.location.href='https://azury.cc/<%= shortUrl.short %>'"></i></td>
 						</tr>
 						<% }) %>
 					</tbody>
@@ -536,70 +89,14 @@
 			</section>
 
 			<div class="version-euwwan">
-        <p>Release 0.2</p>
+        <p>Stable 0.3</p>
       </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <script src="https://unpkg.com/tippy.js@6"></script>
-		<script>
-		// Copy Function
-		function copy(value) {
-			var tempInput = document.createElement("input");
-			tempInput.style = "position: absolute; left: -1000px; top: -1000px";
-			tempInput.value = value;
-			document.body.appendChild(tempInput);
-			tempInput.select();
-			document.execCommand("copy");
-			document.body.removeChild(tempInput);
-		}
-
-		// Preloader
-		$(document).ready(function hidePreloader(){
-			$('.loader-oa2dik').fadeOut(1000);
-			$('.app-7hx5g9').css('display','block');
-		});
-
-		// Cookie Notice
-		$(".btn-tjx5g4").click(function hideCookieNotice(){
-			$(".cookieNotice-xrj9n7").fadeOut();
-		});
-
-		$(document).ready(function showCookieNotice() {
-			var isshow = localStorage.getItem('cookienotice');
-			if (isshow== null) {
-				localStorage.setItem('cookienotice', 1);
-					$('.cookieNotice-xrj9n7').show();
-				}
-		});
-
-		// Tips
-		tippy('.input-o90v7m', {
-			content: 'Paste your long disgusting link here.',
-			animation: 'shift-toward-extreme',
-			theme: 'darken',
-		});
-
-		tippy('.link-sp0l5y', {
-			content: 'Copied.',
-			animation: 'shift-toward-extreme',
-			theme: 'darken',
-			trigger: 'click',
-		});
-
-		tippy('.fa-copy', {
-			content: 'Copy short link to clipboard',
-			animation: 'shift-toward-extreme',
-			theme: 'darken',
-		});
-
-		tippy('.fa-angle-right', {
-			content: 'Go to website',
-			animation: 'shift-toward-extreme',
-			theme: 'darken',
-		});
-		</script>
+		<script src="https://unpkg.com/tippy.js@6"></script>
+		<script src="assets/483c80cbac09.js"></script>
   </body>
 </html>
