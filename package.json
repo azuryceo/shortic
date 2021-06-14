@@ -1,17 +1,26 @@
 {
-	"name": "url-shortner",
-	"version": "1.0.0",
-	"main": "index.js",
-	"author": "azury",
-	"license": "MIT",
-	"scripts": {
-		"start": "node index.js"
-	},
-	"dependencies": {
-		"dotenv": "^8.2.0",
-		"ejs": "^3.1.5",
-		"express": "^4.17.1",
-		"mongoose": "^5.10.5",
-		"shortid": "^2.2.15"
-	}
+  "name": "shorty",
+  "version": "1.0.0",
+  "description": "A high-performance URL shortener built on Node.js.",
+  "main": "api.js",
+  "scripts": {
+    "start": "node api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shortyapp/shorty.git"
+  },
+  "author": "azury",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/shortyapp/shorty/issues"
+  },
+  "homepage": "https://github.com/shortyapp/shorty#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fastify": "^3.17.0",
+    "lru-cache": "^6.0.0",
+    "mongoose": "^5.12.13",
+    "nanoid": "^3.1.23"
+  }
 }
