@@ -19,6 +19,8 @@
   "dependencies": {
     "dotenv": "^10.0.0",
     "fastify": "^3.17.0",
+    "fastify-compress": "^3.6.0",
+    "fastify-cors": "^6.0.1",
     "lru-cache": "^6.0.0",
     "mongoose": "^5.12.13",
     "nanoid": "^3.1.23"
