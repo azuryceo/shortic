@@ -1,6 +1,6 @@
 {
   "name": "shorty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A high-performance URL shortener built on Node.js.",
   "main": "api.js",
   "scripts": {
