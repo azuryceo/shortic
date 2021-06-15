@@ -11,7 +11,6 @@ const urlSchema = require('./schemas/url')
 
 // env
 require('dotenv').config()
-const env = process.env
 
 // fastify
 engine.register(compress)
@@ -22,7 +21,7 @@ const maxAge = { maxAge: 24 * 60 * 60 * 1000 } // 1d
 const cache = new lru(maxAge)
 
 // mongoose
-mongoose.connect(env.mongo, {
+mongoose.connect(process.env.mongo, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useFindAndModify: false
@@ -37,7 +36,8 @@ function isNotValidURL(url) {
 }
 
 engine.get('/', (req, reply) => {
-  reply.status(301).redirect('https://app.shrty.gq')
+  // reply.status(301).redirect('https://app.shrty.gq')
+  return { info: 'Shorty\'s API' }
 })
 
 // get short url
@@ -96,7 +96,7 @@ engine.get('/:short', async (req, reply) => {
 // start fastify
 const start = async () => {
   try {
-    await engine.listen(env.port)
+    await engine.listen(process.env.port)
     console.log('Fastify was launched.')
   } catch (err) {
     engine.log.error(err)
