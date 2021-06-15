@@ -6,7 +6,7 @@ const cors = require('fastify-cors')
 const lru = require('lru-cache')
 const mongoose = require('mongoose')
 const { nanoid } = require('nanoid')
-const { port, shortLength } = require('./config.json')
+const { shortLength } = require('./config.json')
 const urlSchema = require('./schemas/url')
 
 // env
@@ -96,7 +96,7 @@ engine.get('/:short', async (req, reply) => {
 // start fastify
 const start = async () => {
   try {
-    await engine.listen(port)
+    await engine.listen(env.port)
     console.log('Fastify was launched.')
   } catch (err) {
     engine.log.error(err)
