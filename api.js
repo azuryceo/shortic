@@ -36,6 +36,10 @@ function isNotValidURL(url) {
   if (res == false) return true 
 }
 
+engine.get('/', (req, reply) => {
+  reply.status(301).redirect('https://app.shrty.gq')
+})
+
 // get short url
 engine.get('/short', async (req, reply) => {
   const url = encodeURI(req.query.url)
