@@ -48,14 +48,12 @@ engine.get('/short', async (req, reply) => {
   if (urlExists) return { short: urlExists._id }
 
   // generate code
-  const mongooseId = new mongoose.Types.ObjectId(Date.now())
-  const objectIdPart = mongooseId.toString().substring(0,4)
-  let length = parseInt(shortLength) - 4
-  let uniqueId
-  if (length <= 0) {
-    uniqueId = objectIdPart
-  } else {
-    uniqueId = objectIdPart + nanoid(length)
+  let uniqueId = nanoid(shortLength)
+
+  // check if code exists
+  const idExists = await urlSchema.findOne({ _id: uniqueId })
+  if (idExists) {
+    uniqueId = uniqueId + nanoid(2)
   }
 
   const newURL = new urlSchema({
