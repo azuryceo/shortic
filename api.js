@@ -36,8 +36,11 @@ function isNotValidURL(url) {
 }
 
 engine.get('/', (req, reply) => {
-  // reply.status(301).redirect('https://app.shrty.gq')
-  return { info: 'Shorty\'s API' }
+  reply.status(301).redirect('https://app.shrty.gq')
+})
+
+engine.get('/status', (req, reply) => {
+  return { status: 'Up & Working' }
 })
 
 // get short url
