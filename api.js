@@ -6,7 +6,7 @@ const cors = require('fastify-cors')
 const lru = require('lru-cache')
 const mongoose = require('mongoose')
 const { nanoid } = require('nanoid')
-const { shortLength } = require('./config.json')
+const { shortLength, frontendEndpoint } = require('./config.json')
 const urlSchema = require('./schemas/url')
 
 // env
@@ -36,7 +36,7 @@ function isNotValidURL(url) {
 }
 
 engine.get('/', (req, reply) => {
-  reply.status(301).redirect(config.frontendEndpoint)
+  reply.status(301).redirect(frontendEndpoint)
 })
 
 engine.get('/status', (req, reply) => {
