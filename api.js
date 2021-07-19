@@ -36,7 +36,7 @@ function isNotValidURL(url) {
 }
 
 engine.get('/', (req, reply) => {
-  reply.status(301).redirect('https://app.shrty.gq')
+  reply.status(301).redirect(config.frontendEndpoint)
 })
 
 engine.get('/status', (req, reply) => {
