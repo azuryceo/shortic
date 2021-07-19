@@ -45,6 +45,7 @@ engine.get('/status', (req, reply) => {
 
 // get short url
 engine.get('/short', async (req, reply) => {
+  if (req.query.url == null) return { error: 'Missing URL' }
   const url = encodeURI(req.query.url)
 
   // check if url is valid
